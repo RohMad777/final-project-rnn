@@ -1,0 +1,59 @@
+{% extends 'layout.html' %} {% block title %} Contact {% endblock %} {% block body
+    %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-lg-6">
+            <div class="mb-5">
+    <h5 class="display-6 fw-bold lh-1 ml-3">Connect with me?</h5>
+            </div>
+        <div class="row mb-3 d-flex justify-content-evenly">
+          <div class="col-4">
+          <a type="button" class="btn btn-primary " href="https://www.facebook.com/punk.r.lowrider/" target="_blank">
+            <i class="bi bi-facebook"></i>
+            <span class="btn-inner--text">Facebook</span>
+          </a>
+          </div>
+          <div class="col-4">
+        <a type="button" class="btn btn-dark" href="https://github.com/RohMad777" target="_blank">
+          <i class="bi bi-github"></i>
+          <span class="btn-inner--text">Github</span>
+        </a>
+        </div>
+        <div class="col-4">
+      <a type="button" class="btn btn-secondary" href="https://wa.me/082122270891" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+        <span class="btn-inner--text">WhatsApp</span>
+      </a>
+      </div>
+        </div>
+        <div class="row mt-3 d-flex justify-content-evenly">
+          <div class="col-4">
+            <a type="button" class="btn btn btn-outline-primary" href="https://www.linkedin.com/in/rohmad-rohmad-27096721a/"" target="_blank">
+              <i class="bi bi-linkedin"></i>
+              <span class="btn-inner--text">Linkedin</a></span>
+            </a>
+          </div>
+          <div class="col-4">
+        <a type="button" class="btn btn-outline-success" href="mailto: rohmadrock@gmail.com" target="_blank">
+          <i class="bi bi-envelope-fill"></i>
+          <span class="btn-inner--text">E-mail</span>
+        </a>
+        </div>
+        <div class="col-4">
+      <a type="button" class="btn btn-outline-info" href="https://www.kaggle.com/rohmadrock" target="_blank">
+        <i class="bi bi-clipboard-data"></i>
+        <span class="btn-inner--text">Kaggle</span>
+      </a>
+      </div>
+        </div>        
+          </div>
+
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{url_for('static', filename='assets/images/contact.svg')}}" class="d-block mx-lg-auto img-fluid" alt="Hero" width="100%" height="100%" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+    

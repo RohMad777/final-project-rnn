@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} {% block title %} Home {% endblock %} {% block body
+    %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{url_for('static', filename='assets/images/hero.svg')}}" class="d-block mx-lg-auto img-fluid" alt="Hero" width="100%" height="100%" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Sentiment Analysis Product Reviews with RNN</h1>
+            <p class="lead">Review feature becomes important in developing sales and becomes one of the considerations for customers in making purchases. Analysis of Tokopedia product sentiment reviews can provide an opportunity to see how Tokopedia customers respond to product quality and seller delivery.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <a type="button" href="/prediction" class="btn1">Start Prediction</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+    

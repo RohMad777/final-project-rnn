@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 400px;
+}
+
+
+.footers {
+    font-family: 'Dancing Script', cursive;
+}
+
+.txt-head {
+    font-family: 'Meddon', cursive;
+    color: rgb(27, 26, 26);
+}
+
+.links {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.nav-item {
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.nav-item .nav-link:hover {
+    color: black !important;
+
+}
+
+
+.btn1 {
+    display: inline-block;
+    margin: 1em 0 0 0;
+    background-color: black;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.btn1:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.lead {
+    text-align: justify;
+}
+
+body {
+    background-image: url(/static/assets/images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -999;
+}

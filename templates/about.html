@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block title %} About {% endblock %} {% block body
+    %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{url_for('static', filename='assets/images/about.svg')}}" class="d-block mx-lg-auto img-fluid" alt="Hero" width="100%" height="100%" loading="lazy">
+            
+          </div>
+          
+          <div class="col-lg-6">
+            <h1 class="display-6 fw-bold lh-1 mb-3">What's going on?</h1>
+            <p class="lead">
+              Currently, internet users in the world continue to experience rapid technological developments. 
+              This increase is one of the factors that trigger the evolution of social media and e-commerce. 
+              This evolution has led to an increase in the amount of information that is quite large or better 
+              known as big data. Today, information is a very important source for making decisions, 
+              such as information about product reviews and ratings. 
+              Product reviews and ratings are very useful information for consumers to make decisions. 
+              Therefore, sentiment analysis is currently an interesting topic to study. 
+              Sentiment analysis is one of the research areas in the field of NLP (Natural Language Processing) 
+              which classifies user reviews into positive and negative reviews. 
+              Sentiment analysis is the study of user reviews about the products or entities they use, 
+              such as food, hotels, airlines, etc. 
+              Many start-up companies in the field of e-commerce are competing to make online store applications, 
+              for example Tokopedia is the online store with the most visitors, which is more than 100 million 
+              visitors per month during the fourth quarter of 2018, beating several other online stores.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+    
