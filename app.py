@@ -1,10 +1,12 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template
-import pickle
+from flask import Flask, request, render_template
+from numpy.core.fromnumeric import argmax
+import tensorflow as tf
+import math
 
 # Create app
 app = Flask(__name__)
-model = pickle.load(open("model/model_knn_clf.pkl", "rb"))
+model = tf.keras.models.load_model('./save_model')
 
 
 @app.route("/")
@@ -14,19 +16,25 @@ def Home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    float_features = [float(x) for x in request.form.values()]
-    features = [np.array(float_features)]
+    float_features = request.form['sentence']
+    features = [float_features]
     prediction = model.predict(features)
 
-    output = {0: "Clients are not credible", 1: "Credible clients"}
+    output = {0: "Negatif", 1: "Netral", 2: "Positif"}
 
-    return render_template("prediction.html",
-                           prediction_text="{}".format(output[prediction[0]]))
+    return render_template("predict.html",
+                           prediction_text="{}".format(output[(int(
+                               math.floor(prediction[0][1])))]))
 
 
-@app.route('/prediction')
-def prediction():
-    return render_template('prediction.html')
+@app.route('/data-set')
+def dataSet():
+    return render_template('tokopediadata.html')
+
+
+@app.route('/predict')
+def predicts():
+    return render_template('predict.html')
 
 
 @app.route('/about')
