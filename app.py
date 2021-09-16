@@ -20,11 +20,16 @@ def predict():
     features = [float_features]
     prediction = model.predict(features)
 
-    output = {0: "Negatif", 1: "Netral", 2: "Positif"}
+    predicted = prediction.argmax(axis=1)
+    if predicted == 0:
+        output = "Negatif"
+    elif predicted == 1:
+        output = "Netral"
+    else:
+        output = "Positif"
 
     return render_template("predict.html",
-                           prediction_text="{}".format(output[(int(
-                               math.floor(prediction[0][1])))]))
+                           prediction_text=output)
 
 
 @app.route('/data-set')
